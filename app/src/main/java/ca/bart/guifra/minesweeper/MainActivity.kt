@@ -94,6 +94,7 @@ class MainActivity : Activity() {
 
     fun refresh() {
 
+        //Mes notes: Le bouton = UI ---- La cell = la DataClass
         (binding.grid.children zip model.grid.asSequence()).forEach { (button, cell) ->
 
             button.setBackgroundResource(
