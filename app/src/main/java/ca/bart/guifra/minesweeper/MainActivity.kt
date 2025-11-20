@@ -9,7 +9,6 @@ import android.widget.Button
 import androidx.core.view.children
 import androidx.core.view.forEach
 import androidx.core.view.forEachIndexed
-import ca.bart.guifra.minesweeper.MainActivity.Companion.NUMBER_OF_MINES
 import ca.bart.guifra.minesweeper.databinding.ActivityMainBinding
 import kotlinx.parcelize.Parcelize
 
@@ -26,13 +25,13 @@ data class Model(val grid: Array<Cell>) : Parcelable
 class MainActivity : Activity() {
 
     companion object {
-
-        const val NUMBER_OF_MINES : Int = 5
         const val TAG = "MainActivity"
         const val NB_COLUMNS = 5
         const val NB_ROWS = 5
         const val GRID_SIZE = NB_COLUMNS * NB_ROWS
     }
+
+    var numberOfMines : Int = 8
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
@@ -44,8 +43,9 @@ class MainActivity : Activity() {
         setContentView(binding.root)
 
         //Donner des mines aux tuiles
+        if (numberOfMines > GRID_SIZE ) numberOfMines = GRID_SIZE //Pour pas que le while crash
         var initializedMines = 0
-        while (initializedMines < NUMBER_OF_MINES) {
+        while (initializedMines < numberOfMines) {
             var randomCell : Cell = model.grid.random()
             if (randomCell.containsMine) continue
             randomCell.containsMine = true
@@ -124,18 +124,24 @@ class MainActivity : Activity() {
 
 
         //Mes notes: Le bouton = UI ---- La cell = la DataClass
-        (binding.grid.children zip model.grid.asSequence()).forEach { (button, cell) ->
+        binding.grid.children.forEachIndexed{ index, button ->
 
-            var adjacentMines = getNeighbors(model.grid.indexOf(cell)).count {model.grid[it].containsMine}
+            var cell = model.grid[index]
+
+            var adjacentMines = getNeighbors(index).count {model.grid[it].containsMine}
             button.setBackgroundResource(
                 if (cell.exposed)
-                    if (adjacentMines > 0) {
-                        if (adjacentMines == 1) R.drawable.one_mine else R.drawable.btn_down
-                    } else {
-                        R.drawable.btn_down
+                    when (adjacentMines) {
+                        1 -> R.drawable.one_mine
+                        2 -> R.drawable.two_mine
+                        3 -> R.drawable.three_mine
+                        4 -> R.drawable.four_mine
+                        5 -> R.drawable.five_mine
+                        6 -> R.drawable.six_mine
+                        7 -> R.drawable.seven_mine
+                        8 -> R.drawable.eight_mine
+                        else -> R.drawable.btn_down
                     }
-                else if (cell.containsMine)
-                    R.drawable.mine
                 else R.drawable.btn_up
             )
         }
