@@ -5,24 +5,33 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import androidx.core.view.children
+import androidx.core.view.forEach
+import androidx.core.view.forEachIndexed
+import ca.bart.guifra.minesweeper.MainActivity.Companion.NUMBER_OF_MINES
 import ca.bart.guifra.minesweeper.databinding.ActivityMainBinding
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Cell(var exposed: Boolean = false) : Parcelable
+data class Cell(
+    var exposed: Boolean = false,
+    var containsMine : Boolean = false
+) : Parcelable
 
 @Parcelize
 data class Model(val grid: Array<Cell>) : Parcelable
+
 
 class MainActivity : Activity() {
 
     companion object {
 
+        const val NUMBER_OF_MINES : Int = 5
         const val TAG = "MainActivity"
-
-        const val NB_COLUMNS = 3
-        const val NB_ROWS = 3
+        const val NB_COLUMNS = 5
+        const val NB_ROWS = 5
+        const val GRID_SIZE = NB_COLUMNS * NB_ROWS
     }
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -33,6 +42,16 @@ class MainActivity : Activity() {
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        //Donner des mines aux tuiles
+        var initializedMines = 0
+        while (initializedMines < NUMBER_OF_MINES) {
+            var randomCell : Cell = model.grid.random()
+            if (randomCell.containsMine) continue
+            randomCell.containsMine = true
+            initializedMines += 1
+
+        }
 
         binding.grid.children.forEachIndexed { index:Int, button: View ->
 
@@ -60,13 +79,22 @@ class MainActivity : Activity() {
         if (model.grid[index].exposed)
             return
 
+        if (model.grid[index].containsMine) {
+            return
+        }
+
         model.grid[index].exposed = true
 
 
 
 
         val howManyExposedNeighbors = getNeighbors(index).count { model.grid[it].exposed }
-        Log.d(TAG, "howManyExposedNeighbors = $howManyExposedNeighbors")
+        var howManyAdjacentMines = getNeighbors(index).count { model.grid[it].containsMine }
+
+        if (howManyAdjacentMines == 0) {
+            getNeighbors(index).forEach { onButtonClicked(it) }
+        }
+        Log.d(TAG, "howManyExposedNeighbors = $howManyExposedNeighbors, howManyAdjacentMines = $howManyAdjacentMines")
 
 
         //getNeighbors(index).forEach { onButtonClicked(it) }
@@ -94,12 +122,20 @@ class MainActivity : Activity() {
 
     fun refresh() {
 
+
         //Mes notes: Le bouton = UI ---- La cell = la DataClass
         (binding.grid.children zip model.grid.asSequence()).forEach { (button, cell) ->
 
+            var adjacentMines = getNeighbors(model.grid.indexOf(cell)).count {model.grid[it].containsMine}
             button.setBackgroundResource(
                 if (cell.exposed)
-                    R.drawable.btn_down
+                    if (adjacentMines > 0) {
+                        if (adjacentMines == 1) R.drawable.one_mine else R.drawable.btn_down
+                    } else {
+                        R.drawable.btn_down
+                    }
+                else if (cell.containsMine)
+                    R.drawable.mine
                 else R.drawable.btn_up
             )
         }
