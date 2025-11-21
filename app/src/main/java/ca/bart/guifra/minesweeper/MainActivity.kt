@@ -26,12 +26,14 @@ class MainActivity : Activity() {
 
     companion object {
         const val TAG = "MainActivity"
-        const val NB_COLUMNS = 5
-        const val NB_ROWS = 5
+        const val NB_COLUMNS = 10
+        const val NB_ROWS = 10
         const val GRID_SIZE = NB_COLUMNS * NB_ROWS
     }
 
-    var numberOfMines : Int = 8
+    var numberOfMines : Int = 15
+    var gameEnded = false
+    var hasLost = false
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
@@ -42,16 +44,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        //Donner des mines aux tuiles
-        if (numberOfMines > GRID_SIZE ) numberOfMines = GRID_SIZE //Pour pas que le while crash
-        var initializedMines = 0
-        while (initializedMines < numberOfMines) {
-            var randomCell : Cell = model.grid.random()
-            if (randomCell.containsMine) continue
-            randomCell.containsMine = true
-            initializedMines += 1
-
-        }
+        initializeGame()
 
         binding.grid.children.forEachIndexed { index:Int, button: View ->
 
@@ -73,6 +66,11 @@ class MainActivity : Activity() {
 
     fun onButtonClicked(index:Int) {
 
+        if (hasLost) {
+            resetGame()
+            return
+        }
+
         val (x, y) = index.toCoords()
         Log.d(TAG, "onButtonClicked(index=$index, x=$x, y=$y)")
 
@@ -80,6 +78,8 @@ class MainActivity : Activity() {
             return
 
         if (model.grid[index].containsMine) {
+            hasLost = true
+            refresh()
             return
         }
 
@@ -99,7 +99,7 @@ class MainActivity : Activity() {
 
         //getNeighbors(index).forEach { onButtonClicked(it) }
 
-
+        if (model.grid.count { it.exposed } >= GRID_SIZE - numberOfMines) gameEnded = true
 
         refresh()
     }
@@ -130,7 +130,8 @@ class MainActivity : Activity() {
 
             var adjacentMines = getNeighbors(index).count {model.grid[it].containsMine}
             button.setBackgroundResource(
-                if (cell.exposed)
+                if (hasLost && cell.containsMine) R.drawable.mine
+                else if (cell.exposed)
                     when (adjacentMines) {
                         1 -> R.drawable.one_mine
                         2 -> R.drawable.two_mine
@@ -144,6 +145,29 @@ class MainActivity : Activity() {
                     }
                 else R.drawable.btn_up
             )
+        }
+    }
+
+    private fun resetGame() {
+        model.grid.forEach {
+            it.containsMine = false
+            it.exposed = false
+            gameEnded = false
+            hasLost = false
+        }
+        initializeGame()
+        refresh()
+    }
+
+    private fun initializeGame() {
+        //Donner des mines aux tuiles
+        if (numberOfMines > GRID_SIZE ) numberOfMines = GRID_SIZE //Pour pas que le while crash
+        var initializedMines = 0
+        while (initializedMines < numberOfMines) {
+            var randomCell : Cell = model.grid.random()
+            if (randomCell.containsMine) continue
+            randomCell.containsMine = true
+            initializedMines += 1
         }
     }
 
