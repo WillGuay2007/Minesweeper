@@ -15,7 +15,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Cell(
     var exposed: Boolean = false,
-    var containsMine : Boolean = false
+    var containsMine : Boolean = false,
+    var hasFlag : Boolean = false
 ) : Parcelable
 
 @Parcelize
@@ -55,9 +56,13 @@ class MainActivity : Activity() {
 
             button.setOnLongClickListener {
 
-
+                Log.d(TAG, "Long click")
+                model.grid[index].hasFlag = !model.grid[index].hasFlag
+                refresh()
                 true // prevents regular click
             }
+
+
         }
 
 
@@ -76,6 +81,10 @@ class MainActivity : Activity() {
 
         if (model.grid[index].exposed)
             return
+
+        if (model.grid[index].hasFlag) {
+            return
+        }
 
         if (model.grid[index].containsMine) {
             hasLost = true
@@ -143,6 +152,7 @@ class MainActivity : Activity() {
                         8 -> R.drawable.eight_mine
                         else -> R.drawable.btn_down
                     }
+                else if (cell.hasFlag) R.drawable.flag
                 else R.drawable.btn_up
             )
         }
