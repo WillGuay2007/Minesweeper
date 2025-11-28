@@ -7,510 +7,556 @@
     android:layout_height="match_parent"
     tools:context="minesweeper.MainActivity">
 
-    <GridLayout
-        android:id="@+id/grid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:columnCount="10">
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-        <Button
-            android:layout_height="20dp"
-            android:layout_width="20dp"
-            android:background="@drawable/btn_up" />
-
-    </GridLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/NewGame"
+                android:layout_centerInParent="true"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:text="Nouvelle partie"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <GridLayout
+                android:id="@+id/grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:columnCount="10">
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+                <Button
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/btn_up" />
+
+            </GridLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/MinesInfo"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:text="Mines restantes: N/A"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
 
 </RelativeLayout>

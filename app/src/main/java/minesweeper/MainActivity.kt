@@ -30,9 +30,10 @@ class MainActivity : Activity() {
         const val GRID_SIZE = NB_COLUMNS * NB_ROWS
     }
 
-    var numberOfMines : Int = 15
+    var numberOfMines : Int = 6
     var gameEnded = false
     var hasLost = false
+    var hasWon = false
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
@@ -54,23 +55,23 @@ class MainActivity : Activity() {
 
             button.setOnLongClickListener {
 
-                Log.d(TAG, "Long click")
-                model.grid[index].hasFlag = !model.grid[index].hasFlag
-                refresh()
+                if (!gameEnded) {
+                    model.grid[index].hasFlag = !model.grid[index].hasFlag //Un toggle
+                    refresh()
+                }
                 true // prevents regular click
             }
-
-
         }
 
-
+        binding.NewGame.setOnClickListener {
+            resetGame()
+        }
 
     }
 
     fun onButtonClicked(index:Int) {
 
-        if (hasLost) {
-            resetGame()
+        if (gameEnded) {
             return
         }
 
@@ -86,6 +87,7 @@ class MainActivity : Activity() {
 
         if (model.grid[index].containsMine) {
             hasLost = true
+            gameEnded = true
             refresh()
             return
         }
@@ -103,10 +105,7 @@ class MainActivity : Activity() {
         }
         Log.d(TAG, "howManyExposedNeighbors = $howManyExposedNeighbors, howManyAdjacentMines = $howManyAdjacentMines")
 
-
-        //getNeighbors(index).forEach { onButtonClicked(it) }
-
-        if (model.grid.count { it.exposed } >= GRID_SIZE - numberOfMines) gameEnded = true
+        checkIfWon()
 
         refresh()
     }
@@ -138,6 +137,7 @@ class MainActivity : Activity() {
             var adjacentMines = getNeighbors(index).count {model.grid[it].containsMine}
             button.setBackgroundResource(
                 if (hasLost && cell.containsMine) R.drawable.mine
+                else if (hasLost && cell.hasFlag && !cell.containsMine) R.drawable.wrong_mine
                 else if (cell.exposed)
                     when (adjacentMines) {
                         1 -> R.drawable.one_mine
@@ -154,17 +154,32 @@ class MainActivity : Activity() {
                 else R.drawable.btn_up
             )
         }
+        val remainingMines = "Mines restantes: ${numberOfMines - model.grid.count { it.hasFlag }}"
+        binding.MinesInfo.text =
+            if (gameEnded && hasLost) "Vous avez perdu.."
+            else if (gameEnded && hasWon) "Vous avez gagné!"
+            else remainingMines
     }
 
     private fun resetGame() {
         model.grid.forEach {
             it.containsMine = false
             it.exposed = false
+            it.hasFlag = false
             gameEnded = false
             hasLost = false
+            hasWon = false
         }
         initializeGame()
         refresh()
+    }
+
+    private fun checkIfWon() {
+        var exposedMines = model.grid.count { it.exposed }
+        if (exposedMines == GRID_SIZE - numberOfMines) {
+            gameEnded = true
+            hasWon = true
+        }
     }
 
     private fun initializeGame() {
