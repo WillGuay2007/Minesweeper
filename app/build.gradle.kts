@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "ca.bart.guifra.minesweeper"
+    namespace = "ca.william.minesweeper"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "ca.bart.guifra.minesweeper"
+        applicationId = "ca.william.minesweeper"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

@@ -1,15 +1,13 @@
-package ca.bart.guifra.minesweeper
+package minesweeper
 
 import android.app.Activity
 import android.os.Bundle
 import android.os.Parcelable
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import androidx.core.view.children
-import androidx.core.view.forEach
-import androidx.core.view.forEachIndexed
-import ca.bart.guifra.minesweeper.databinding.ActivityMainBinding
+import ca.william.minesweeper.R
+import ca.william.minesweeper.databinding.ActivityMainBinding
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
