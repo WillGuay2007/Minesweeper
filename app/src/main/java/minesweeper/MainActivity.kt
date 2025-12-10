@@ -9,6 +9,7 @@ import androidx.core.view.children
 import ca.william.minesweeper.R
 import ca.william.minesweeper.databinding.ActivityMainBinding
 import kotlinx.parcelize.Parcelize
+import kotlin.math.log
 
 @Parcelize
 data class Cell(
@@ -30,7 +31,7 @@ class MainActivity : Activity() {
         const val GRID_SIZE = NB_COLUMNS * NB_ROWS
     }
 
-    var numberOfMines : Int = 6
+    var numberOfMines : Int = 10
     var gameEnded = false
     var hasLost = false
     var hasWon = false
@@ -44,7 +45,19 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        initializeGame()
+
+        if (savedInstanceState != null) {
+            model = savedInstanceState.getParcelable("modelKey")!!
+            numberOfMines = savedInstanceState.getInt("numberOfMinesKey")
+            gameEnded = savedInstanceState.getBoolean("gameEndedKey")
+            hasWon = savedInstanceState.getBoolean("hasWonKey")
+            hasLost = savedInstanceState.getBoolean("hasLostKey")
+            refresh()
+        } else {
+            initializeGame()
+        }
+
+
 
         binding.grid.children.forEachIndexed { index:Int, button: View ->
 
@@ -67,6 +80,15 @@ class MainActivity : Activity() {
             resetGame()
         }
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable("modelKey", model)
+        outState.putInt("numberOfMinesKey", numberOfMines)
+        outState.putBoolean("gameEndedKey", gameEnded)
+        outState.putBoolean("hasLostKey", hasLost)
+        outState.putBoolean("hasWonKey", hasWon)
     }
 
     fun onButtonClicked(index:Int) {
